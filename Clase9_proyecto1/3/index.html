@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarma</title>
+    <script src="script.js"defer></script>
+    
+</head>
+<body>
+    <h1>Alarma</h1>
+    <input type="number" name="tiempo" id="tiempo">
+    <button id="activar">Alarma</button>
+    <h1 id="estado" style = "color: red;">Apagado</h1> 
+    <button id="apagar">Apagar Alarma</button>
+  <br>
+  <audio  id="alarmaAudio">
+    <source src="alarma.mp3" type="audio/mpeg">
+  </audio>
+
+  <h3 id = "horaActual"></h3>
+</body>
+</html>
