@@ -1,0 +1,72 @@
+body {
+    background: linear-gradient(#fcfcfc, #f2f2f2);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado {
+    background-color: #ef3340;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    margin: 0;
+}
+
+#contenedor-botones {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#notas-lista {
+    list-style: none;
+    padding: 0;
+}
+
+#boton-cargar,
+#boton-borrar,
+#boton-media,
+#boton-suspensos,
+#boton-nota-mas-alta {
+    background-color: #ef3340;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#boton-borrar:disabled,
+#boton-media:disabled,
+#boton-suspensos:disabled,
+#boton-nota-mas-alta:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#media-texto,
+#suspensos-texto,
+#nota-mas-alta-texto {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ac8a1a; /* Amarillo */
+}
+
+#media-texto::before {
+    content: "Media: ";
+}
+
+#suspensos-texto::before {
+    content: "Suspensos: ";
+}
+
+#nota-mas-alta-texto::before {
+    content: "Nota Más Alta: ";
+}

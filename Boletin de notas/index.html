@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro de Calificaciones 2.0</title>
+  <title>Boletín de Notas</title>
   <script src="script.js" defer></script>
-  <link rel="stylesheet" href="css/estilo-personalizado.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h2 id="titulo-personalizado">Registro de Calificaciones</h2>
+  <div>
+    <div id="encabezado">
+      Boletín de Notas - Pablo
+    </div>
 
-  <form id="formulario-personalizado">
-    <label id="etiqueta-nombre-alumno" for="nombre-alumno">Alumno: <input type="text" id="nombre-alumno" autofocus onfocus="this.select()" autocomplete="off" /></label>
-    <button id="boton-verificar">Verificar</button>
-    <button id="boton-reiniciar" disabled>Reiniciar</button>
-  </form>
+    <div id="contenedor-botones">
+      <button id="boton-cargar" onclick="cargarNotas()">Cargar Notas</button>
+      <button id="boton-borrar" onclick="borrarNotas()" disabled>Borrar Notas</button>
+
+      <ul id="notas-lista"></ul>
+
+      <button id="boton-media" onclick="mostrarMedia()" disabled>Mostrar Media</button>
+      <button id="boton-suspensos" onclick="mostrarSuspensos()" disabled>Mostrar Suspensos</button>
+      <button id="boton-nota-mas-alta" onclick="mostrarNotaMasAlta()" disabled>Mostrar Nota Más Alta</button>
+
+      <p id="media-texto"></p>
+      <p id="suspensos-texto"></p>
+      <p id="nota-mas-alta-texto"></p>
+    </div>
+  </div>
 </body>
 </html>
