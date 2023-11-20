@@ -8,8 +8,18 @@
 <body>
     <form id="jobForm">
         <label for="jobInput">Ingrese el puesto de trabajo</label>
-        <input type="text" id="jobInput" autocomplete="off" />
-        <input type="button" id="calculateBtn"/>
+        <select name="jobs" id="jobInput">
+            <option value="developer">developer</option>
+            <option value="designer">designer</option>
+            <option value="manager">manager</option>
+            <option value="sales">sales</option>
+            <option value="accountant">accountant</option>
+            <option value="hr">hr</option>
+            <option value="teacher">teacher</option>
+            <option value="student">student</option>
+        </select>
+     
+        <input type="submit" id="calculateBtn" value="Calcular Salario" >
     </form>
     <p id="result"></p>
     <script src="script.js"></script>

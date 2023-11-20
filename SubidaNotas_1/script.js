@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded",()=>{
     const calculateBtn=document.getElementById("calculateBtn");
-    const resultPara=document.getElementsById("result");
+    const resultPara=document.getElementById("result");
 
-    calculateBtn.addEventListener("click",()=>{
+    calculateBtn.addEventListener("click",(event)=>{
+        event.preventDefault();
+        
         const jobInput=document.getElementById("jobInput").value.toLowerCase();
         const salary=getSalary(jobInput);
+
         if(salary !==null){
-        resultPara.textContent=`El salario para "${jobInput} es de ${salary} euros`;
+        resultPara.textContent=`El salario para ${jobInput} es de ${salary} euros`;
         }else{
             resultPara.textContent="No se encuentra el trabajo";
         }
@@ -26,7 +29,7 @@ function getSalary(job){
         {job:"student",salary:0}
        
     ];
-    const foundJob=jobsData.find(obj=>obj.title===job);
+    const foundJob=jobsData.find(obj=>obj.job===job);
     return foundJob ? foundJob.salary : null;
 }
 });
