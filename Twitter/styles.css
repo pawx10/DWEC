@@ -87,3 +87,23 @@ textarea[disabled] {
 .deleteBtn:hover {
     color: #0d8bf0;
 }
+
+/* Estilos para el cuadro de error */
+.error-box {
+    background-color: rgba(255, 77, 77, 0.8); /* Color rojo con transparencia */
+    color: white;
+    padding: 10px;
+    margin: 10px auto; /* Centra horizontalmente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para el cuadro de confirmación */
+.confirmation-box {
+    background-color: rgba(77, 148, 255, 0.8); /* Color azul con transparencia */
+    color: white;
+    padding: 10px;
+    margin: 10px auto; /* Centra horizontalmente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    text-align: center; /* Centra el texto */
+}

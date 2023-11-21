@@ -1,6 +1,5 @@
 // Obtiene los tweets del almacenamiento local o crea un array vacío si no hay datos
 const tweetsArray = localStorage.getItem("tweets") ? JSON.parse(localStorage.getItem("tweets")) : [];
-console.log(tweetsArray);
 
 // Evento al hacer click en el botón "Enter" para crear un tweet
 document.querySelector("#enter").addEventListener("click", () => {
@@ -9,7 +8,7 @@ document.querySelector("#enter").addEventListener("click", () => {
 
     // Verifica si el tweet está vacío o tiene contenido no válido
     if (tweetContent === "" || tweetContent === "camaron" || tweetContent === "camaron de la isla" || tweetContent === "el fary") {
-        alert("Tweet no válido. Por favor, ingresa un contenido diferente.");
+        displayErrorMessage("Tweet no válido. Por favor, ingresa un contenido diferente.");
     } else {
         createtweet(tweet);
     }
@@ -17,8 +16,10 @@ document.querySelector("#enter").addEventListener("click", () => {
 
 // Evento al hacer click en el botón "Reset" para eliminar todos los tweets
 document.querySelector("#reset").addEventListener("click", () => {
-    if (confirm("¿Estás seguro de que quieres eliminar todos los tweets?")) {
+    if (tweetsArray.length > 0) {
         resetTweets();
+    } else {
+        displayErrorMessage("No hay tweets para eliminar.");
     }
 });
 
@@ -40,7 +41,6 @@ function displayTweets() {
     document.querySelector(".tweet-list").innerHTML = tweets;
     activateDeleteListeners();
 }
-
 // Agrega oyentes para borrar tweets individualmente
 function activateDeleteListeners() {
     let deleteBtn = document.querySelectorAll(".deleteBtn");
@@ -78,14 +78,34 @@ window.onload = function () {
     displayTweets();
 };
 
+function displayErrorMessage(message) {
+    const errorBox = document.createElement("div");
+    errorBox.classList.add("error-box");
+    errorBox.textContent = message;
+    document.body.appendChild(errorBox);
+
+    setTimeout(() => {
+        errorBox.style.display = "none";
+    }, 3000);
+}
+
+// Función para mostrar un mensaje de confirmación
+function displayConfirmationMessage(message) {
+    const confirmationBox = document.createElement("div");
+    confirmationBox.classList.add("confirmation-box");
+    confirmationBox.textContent = message;
+    document.body.appendChild(confirmationBox);
+
+    setTimeout(() => {
+        confirmationBox.style.display = "none";
+    }, 3000);
+}
+
+
 // Función para resetear todos los tweets
 function resetTweets() {
-    if (tweetsArray.length > 0) {
-        tweetsArray.length = 0;
-        localStorage.removeItem("tweets");
-        displayTweets();
-        alert("Todos los tweets han sido eliminados correctamente.");
-    } else {
-        alert("No hay tweets para eliminar.");
-    }
+    tweetsArray.length = 0;
+    localStorage.removeItem("tweets");
+    displayTweets();
+    displayConfirmationMessage("Todos los tweets han sido eliminados correctamente.");
 }
