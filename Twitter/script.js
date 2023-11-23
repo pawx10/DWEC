@@ -7,13 +7,15 @@ document.querySelector("#enter").addEventListener("click", () => {
     const tweetContent = tweet.value.trim().toLowerCase();
 
     // Verifica si el tweet está vacío o tiene contenido no válido
-    if (tweetContent === "" || tweetContent === "camaron" || tweetContent === "camaron de la isla" || tweetContent === "el fary") {
+    if (tweetContent === "" || tweetContent === "camaron" || tweetContent === "camaron de la isla") {
         displayErrorMessage("Tweet no válido. Por favor, ingresa un contenido diferente.");
-    } else {
+    } else if (tweetContent.includes("fary")) {
+        displayElFaryMessage("¡Enhorabuena, has puesto El Fary!");
+        
         createtweet(tweet);
     }
 });
-//PARTE PABLO
+
 // Evento al hacer click en el botón "Reset" para eliminar todos los tweets
 document.querySelector("#reset").addEventListener("click", () => {
     if (tweetsArray.length > 0) {
@@ -41,6 +43,7 @@ function displayTweets() {
     document.querySelector(".tweet-list").innerHTML = tweets;
     activateDeleteListeners();
 }
+
 // Agrega oyentes para borrar tweets individualmente
 function activateDeleteListeners() {
     let deleteBtn = document.querySelectorAll(".deleteBtn");
@@ -50,7 +53,7 @@ function activateDeleteListeners() {
         });
     });
 }
-//PARTE GUILLERMO
+
 // Función para borrar un tweet
 function deleteTweet(i) {
     tweetsArray.splice(i, 1);
@@ -65,6 +68,7 @@ function createtweet(tweet) {
     displayTweets();
 }
 
+
 // Función para mostrar la fecha actual
 function displaydate() {
     let date = new Date();
@@ -77,7 +81,8 @@ window.onload = function () {
     displaydate();
     displayTweets();
 };
-//PARTE MARIO
+
+// Función para mostrar un mensaje de error
 function displayErrorMessage(message) {
     const errorBox = document.createElement("div");
     errorBox.classList.add("error-box");
@@ -88,7 +93,7 @@ function displayErrorMessage(message) {
         errorBox.style.display = "none";
     }, 3000);
 }
-//PARTE MARIO
+
 // Función para mostrar un mensaje de confirmación
 function displayConfirmationMessage(message) {
     const confirmationBox = document.createElement("div");
@@ -101,7 +106,18 @@ function displayConfirmationMessage(message) {
     }, 3000);
 }
 
-//Parte Pablo
+// Función para mostrar un mensaje relacionado con El Fary
+function displayElFaryMessage(message) {
+    const elfaryBox = document.createElement("div");
+    elfaryBox.classList.add("elfary-box");
+    elfaryBox.textContent = message;
+    document.body.appendChild(elfaryBox);
+
+    setTimeout(() => {
+        elfaryBox.style.display = "none";
+    }, 3000);
+}
+
 // Función para resetear todos los tweets
 function resetTweets() {
     tweetsArray.length = 0;

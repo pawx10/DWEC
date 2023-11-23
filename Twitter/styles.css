@@ -107,3 +107,12 @@ textarea[disabled] {
     width: fit-content; /* Ajusta el ancho al contenido */
     text-align: center; /* Centra el texto */
 }
+
+.elfary-box {
+    background-color: rgba(228, 196, 11, 0.724); /* Color azul con transparencia */
+    color: white;
+    padding: 10px;
+    margin: 10px auto; /* Centra horizontalmente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    text-align: center; /* Centra el texto */
+}
