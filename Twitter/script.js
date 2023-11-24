@@ -13,6 +13,9 @@ document.querySelector("#enter").addEventListener("click", () => {
         displayElFaryMessage("¡Enhorabuena, has puesto El Fary!");
         
         createtweet(tweet);
+    }else{
+        createtweet(tweet);
+    
     }
 });
 
