@@ -1,0 +1,100 @@
+[
+  {
+    "src": "../img/curso1.jpg",
+    "titulo": "HTML5, CSS3, JavaScript para Principiantes",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "1"
+  },
+  {
+    "src": "../img/curso2.jpg",
+    "titulo": "Curso de Comida Vegetariana",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "2"
+  },
+  {
+    "src": "../img/curso3.jpg",
+    "titulo": "Guitarra para Principiantes",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "3"
+  },
+  {
+    "src": "../img/curso4.jpg",
+    "titulo": "Huerto en tu casa",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "4"
+  },
+  {
+    "src": "../img/curso5.jpg",
+    "titulo": "Decoración con productos de tu hogar",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "5"
+  },
+  {
+    "src": "../img/curso1.jpg",
+    "titulo": "Diseño Web para Principiantes",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "6"
+  },
+  {
+    "src": "../img/curso2.jpg",
+    "titulo": "Comida Mexicana para principiantes",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "7"
+  },
+  {
+    "src": "../img/curso3.jpg",
+    "titulo": "Estudio Musical en tu casa",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "8"
+  },
+
+  {
+    "src": "../img/curso4.jpg",
+    "titulo": "Huerto en tu casa",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "9"
+  },
+  {
+    "src": "../img/curso5.jpg",
+    "titulo": "Decoración con productos de tu hogar",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "10"
+  },
+
+  {
+    "src": "../img/curso3.jpg",
+    "titulo": "Guitarra para Principiantes",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "11"
+  },
+  {
+    "src": "../img/curso4.jpg",
+    "titulo": "Huerto en tu casa",
+    "author": "Juan Pedro",
+    "precioAlto": "$200",
+    "precioBajo": "$15",
+    "id": "12"
+  }
+]
