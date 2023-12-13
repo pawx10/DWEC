@@ -45,8 +45,10 @@ export function agregarCursoAlCarrito(curso, carrito) {
   if (cursoEnCarrito) {
     cursoEnCarrito.cantidad++;
   } else {
+   
     curso.cantidad = 1;
     carrito.push(curso);
+    
   }
 
   actualizarCarrito(carrito, document.getElementById('lista-carrito').getElementsByTagName('tbody')[0]);
